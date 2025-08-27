@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UMIN · Portfolio</title>
+  <meta name="description" content="UMIN CHEN — UI/UX Designer Portfolio" />
+  <style>
+    :root{
+      --bg:#000;--fg:#fff;--muted:rgba(255,255,255,.75);--line:rgba(255,255,255,.12);
+      --chip:rgba(255,255,255,.06);--chipline:rgba(255,255,255,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Arial,Apple Color Emoji,Segoe UI Emoji}
+    a{color:var(--fg);text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.7);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;gap:12px;padding:16px 0}
+    .brand{font-weight:700;letter-spacing:.02em}
+    .navlink{padding:.4rem .8rem;border:1px solid transparent;border-radius:10px}
+    .navlink:hover{border-color:var(--line);background:rgba(255,255,255,.05)}
+    .hero{padding:64px 0}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0}
+    p.lead{color:var(--muted);max-width:720px;margin:12px 0 0}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:16px;padding:.7rem 1rem;border:1px solid var(--line)}
+    .btn.primary{background:rgba(255,255,255,.08)}
+    .btn.primary:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.24)}
+    .btn.ghost:hover{background:rgba(255,255,255,.06)}
+    section.block{padding:64px 0;border-top:1px solid var(--line)}
+    h2{margin:0 0 8px;font-size:28px}
+    .muted{color:var(--muted)}
+    .pills{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
+    .pill{padding:.6rem 1rem;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+    .toolbar{display:flex;gap:16px;align-items:end;flex-wrap:wrap}
+    .search{margin-left:auto;max-width:360px;width:100%}
+    .search input{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--fg);border-radius:16px;padding:10px 14px;outline:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:20px}
+    .card{border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:20px;overflow:hidden}
+    .thumb{aspect-ratio:16/9;width:100%;object-fit:cover;display:block}
+    .card .body{padding:14px}
+    .meta{display:flex;justify-content:space-between;color:rgba(255,255,255,.7);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;padding:.25rem .6rem;border-radius:999px;background:var(--chip);border:1px solid var(--chipline)}
+    footer{border-top:1px solid var(--line);padding:32px 0;color:rgba(255,255,255,.7)}
+    code.inline{padding:0 .25rem;border-radius:6px;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only">跳到主要內容</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">UMIN · Portfolio</div>
+        <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="navlink" href="#about">關於</a>
+          <a class="navlink" href="#works">作品</a>
+          <a class="navlink" href="#resume">履歷</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h1>UI/UX Designer 專注 AIoT 與安控生態系</h1>
+      <p class="lead">打造 VMS · NVR · Cloud · App 的一致體驗與設計系統，讓複雜的安防情境變得清晰可用。</p>
+      <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn primary" href="#works">查看作品</a>
+        <a class="btn ghost" href="#resume">下載履歷</a>
+      </div>
+    </div>
+  </section>
+  <main id="main">
+    <section id="about" class="block">
+      <div class="container">
+        <h2>關於 UMIN</h2>
+        <p class="muted">你好，我是 <strong>UMIN CHEN</strong>，UI/UX 設計師，專注於 VMS 生態系與跨裝置體驗（App / NVR / Cloud）。關注設計系統、資訊架構與可維護性，使用 Figma 與前端框架協作交付。</p>
+        <div class="pills">
+          <div class="pill">5+ 年產品設計</div>
+          <div class="pill">安控 / AIoT 領域</div>
+          <div class="pill">B2B2C 雙場景</div>
+        </div>
+      </div>
+    </section>
+    <section id="works" class="block">
+      <div class="container">
+        <div class="toolbar">
+          <h2>作品</h2>
+          <div class="search">
+            <label class="muted" style="display:block;font-size:12px;margin:0 0 6px;letter-spacing:.08em;text-transform:uppercase">搜尋作品</label>
+            <input id="search" placeholder="輸入關鍵字、標籤或年份…" />
+          </div>
+        </div>
+        <div id="grid" class="grid"></div>
+      </div>
+    </section>
+    <section id="resume" class="block">
+      <div class="container">
+        <h2>下載履歷</h2>
+        <p class="muted">把你的 PDF 放到 <code class="inline">/resume/UMIN_CHEN_Resume.pdf</code>，或改成你實際的路徑。</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn primary" href="./resume/UMIN_CHEN_Resume.pdf" download>下載 PDF</a>
+          <a class="btn ghost" href="./resume/UMIN_CHEN_Resume.pdf" target="_blank" rel="noreferrer noopener">線上預覽</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container" style="display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap">
+      <div>© <span id="year"></span> UMIN CHEN. All rights reserved.</div>
+      <div style="display:flex;gap:12px">
+        <a href="#about">關於</a>
+        <a href="#works">作品</a>
+        <a href="#resume">履歷</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const PROJECTS = [
+      { id: "vms-app", title: "VMS App – 租賃制影像管理", role: "UI/UX Design • Design System", year: "2024–2025",
+        tags: ["VMS","Mobile","IoT"],
+        thumb: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
+        link: "#",
+        summary: "行動端影像觀看、排程、回放、帳號與系統設定，含多品牌 IPC 快速新增流程。"
+      },
+      { id: "nvr", title: "NVR – 錄影主機設定與監控", role: "Product Design • UX Flow", year: "2024",
+        tags: ["NVR","Security","Desktop"],
+        thumb: "https://images.unsplash.com/photo-1527443224154-c4f2a1b2b981?q=80&w=1200&auto=format&fit=crop",
+        link: "#",
+        summary: "多站點集中管理、通道設定與健康檢查，簡化安裝維護。"
+      },
+      { id: "cloud", title: "Cloud – VMS 生態系骨幹", role: "UX • IA • Copy", year: "2025",
+        tags: ["Cloud","Web","Platform"],
+        thumb: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+        link: "#",
+        summary: "串聯 NVR 與 VMS，提供授權、租賃管理與基本監控入口。"
+      }
+    ];
+    const yearEl = document.getElementById('year');
+    yearEl.textContent = new Date().getFullYear();
+    const grid = document.getElementById('grid');
+    function render(list){
+      grid.innerHTML = list.map(p => `
+        <article class="card">
+          <a href="${p.link}" aria-label="${p.title} – 打開作品">
+            <img class="thumb" src="${p.thumb}" alt="${p.title} cover" loading="lazy" />
+            <div class="body">
+              <div class="meta"><span>${p.role}</span><span>${p.year}</span></div>
+              <h3 style="margin:.35rem 0 0;font-size:18px">${p.title}</h3>
+              <p class="muted" style="margin:.35rem 0 0;font-size:14px">${p.summary}</p>
+              <div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+            </div>
+          </a>
+        </article>`).join('');
+    }
+    render(PROJECTS);
+    const input = document.getElementById('search');
+    input.addEventListener('input', (e)=>{
+      const q = e.target.value.trim().toLowerCase();
+      if(!q) return render(PROJECTS);
+      const filtered = PROJECTS.filter(p => (
+        `${p.title} ${p.role} ${p.year} ${p.summary} ${p.tags.join(' ')}`
+      ).toLowerCase().includes(q));
+      render(filtered);
+    });
+  </script>
+</body>
+</html>
